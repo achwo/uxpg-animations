@@ -1,5 +1,9 @@
 <p>
-  <button (click)="jump()">Jump</button>
+  <button 
+    (click)="jump()" 
+    (mouseenter)="switchColor(true)"
+    (mouseleave)="switchColor(false)"
+    [@color]="colorful ? 'colorful' : 'normal'">Jump</button>
 </p>
 
 <div class="container">
