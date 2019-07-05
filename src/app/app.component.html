@@ -1,7 +1,8 @@
-<p><button (click)="move()">Move</button></p>
+<p><button (click)="up()">Up</button></p>
 
 <div class="container">
-  <div class="bob">
+  <div class="bob" [@airbourne]="flying ? 'airbourne' : 'normal'"
+    >
     <div class="eye left-eye"></div>
     <div class="eye right-eye"></div>
   </div>
