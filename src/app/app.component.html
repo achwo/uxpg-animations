@@ -1,14 +1,9 @@
 <p>
-  <button (click)="up()">Up</button>
-  <button (click)="squeeze()">Squeeze</button>
   <button (click)="jump()">Jump</button>
 </p>
 
 <div class="container">
-  <div class="bob" 
-    [@airbourne]="flying ? 'airbourne' : 'normal'"
-    [@squeeze]="squeezing ? 'squeeze' : 'normal'"
-    [@jump]="jumping ? 'airbourne' : 'normal'"
+  <div class="bob" [@jump]="jumping ? 'airbourne' : 'normal'"
     >
     <div class="eye left-eye"></div>
     <div class="eye right-eye"></div>

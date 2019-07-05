@@ -14,28 +14,6 @@ import {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [
-    trigger('airbourne', [
-      state('normal', style({})),
-      state(
-        'airbourne',
-        style({
-          transform: 'translateY(-200%)'
-        })
-      ),
-      transition('normal <=> airbourne', [animate('0.7s ease')])
-    ]),
-
-    trigger('squeeze', [
-      state('normal', style([])),
-      state(
-        'squeeze',
-        style({
-          height: '50px'
-        })
-      ),
-      transition('* => *', [animate('0.5s ease')])
-    ]),
-
     trigger('jump', [
       state('normal', style([])),
       state(
@@ -66,17 +44,7 @@ import {
   ]
 })
 export class AppComponent {
-  flying = false;
-  squeezing = false;
   jumping = false;
-
-  up() {
-    this.flying = !this.flying;
-  }
-
-  squeeze() {
-    this.squeezing = !this.squeezing;
-  }
 
   jump() {
     this.jumping = !this.jumping;
