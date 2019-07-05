@@ -3,7 +3,9 @@
 </p>
 
 <div class="container">
-  <div class="bob" [@jump]="jumping ? 'airbourne' : 'normal'"
+  <div class="bob" 
+    [@jump]="jumping ? 'airbourne' : 'normal'"
+    (@jump.done)="onJumpFinished($event)"
     >
     <div class="eye left-eye"></div>
     <div class="eye right-eye"></div>
